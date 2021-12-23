@@ -35,12 +35,11 @@ function check(){
     console.log("Answer Entered in Lower Case : " + get_answer);
 
     if(actual_number == get_answer){
-        if(Answer_Turn = "Player2"){
+        if(Answer_Turn == "Player2"){
             player2_score = player2_score + 1;
             document.getElementById("player2_score").innerHTML = player2_score;
             console.log("Player 2 score : " + player2_score);
-        }
-
+        } 
         else{
             player1_score = player1_score + 1;
             document.getElementById("player1_score").innerHTML = player1_score;
@@ -50,20 +49,20 @@ function check(){
 
     if(Question_Turn == "Player1"){
         Question_Turn = "Player2";
-        document.getElementById("PlayerQuestion").innerHTML = "Question Turn : " + player2_name;
+        document.getElementById("Questioner_turn").innerHTML = "Question Turn : " + player2_name;
     }
     else{
         Question_Turn = "Player1";
-        document.getElementById("PlayerQuestion").innerHTML = "Question Turn : " + player1_name;
+        document.getElementById("Questioner_turn").innerHTML = "Question Turn : " + player1_name;
     }
 
     if(Answer_Turn == "Player1") {
         Answer_Turn = "Player2";
-        document.getElementById("PlayerAnswer").innerHTML = "Answer Turn : " + player2_name;
+        document.getElementById("Answer_turn").innerHTML = "Answer Turn : " + player2_name;
     }
     else{
         Answer_Turn = "Player1";
-        document.getElementById("PlayerAnswer").innerHTML = "Answer Turn : " + player1_name;
+        document.getElementById("Answer_turn").innerHTML = "Answer Turn : " + player1_name;
     }
 
     document.getElementById("output").innerHTML = "";
